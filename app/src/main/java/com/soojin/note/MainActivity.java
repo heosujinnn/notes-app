@@ -144,6 +144,8 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             case R.id.pin:
                 if(selectedNote.isPinned()){
                     dataBase.mainDAO().pin(selectedNote.getID(),false);
+                    
+                    //새로고침
                     overridePendingTransition(0,0);
                     startActivity(getIntent());
                     overridePendingTransition(0,0);
